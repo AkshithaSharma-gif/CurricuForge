@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CurricuForge - AI Curriculum Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ CurricuForge</h1>
+            <p>Generate personalized learning curriculums powered by AI</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <form id="curriculumForm">
+                    <div class="form-group">
+                        <label for="skill">🎯 Topic / Skill</label>
+                        <input type="text" id="skill" name="skill" required
+                            placeholder="e.g., Python Web Development, Machine Learning, Data Science">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="level">📊 Skill Level</label>
+                        <select id="level" name="level">
+                            <option value="Beginner">🌱 Beginner - Starting from scratch</option>
+                            <option value="Intermediate">📈 Intermediate - Some experience</option>
+                            <option value="Advanced">🚀 Advanced - Deep expertise</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="industry">🏢 Industry Focus (Optional)</label>
+                        <input type="text" id="industry" name="industry"
+                            placeholder="e.g., Fintech, Healthcare, E-commerce, Gaming">
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="semesters">📅 Duration (Semesters)</label>
+                            <input type="number" id="semesters" name="semesters" min="1" max="8" value="2">
+                        </div>
+                        <div class="form-group">
+                            <label for="hours">⏱️ Weekly Hours</label>
+                            <input type="number" id="hours" name="hours" min="1" max="40" value="10">
+                        </div>
+                    </div>
+
+                    <button type="submit" id="generateBtn">
+                        🚀 Generate My Curriculum
+                    </button>
+                </form>
+            </section>
+
+            <section id="resultsSection" class="hidden">
+                <div class="results-header">
+                    <h2>Your Custom Curriculum</h2>
+                    <button id="downloadBtn">📥 Download PDF</button>
+                </div>
+                <div id="curriculumContent"></div>
+            </section>
+        </main>
+    </div>
+    <script src="/static/script.js"></script>
+
+    <div class="bottom-btn">
+        <a href="/info">About Project</a>
+    </div>
+
+
+</body>
+
+</html>

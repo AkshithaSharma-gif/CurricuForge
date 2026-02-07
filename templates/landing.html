@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CurricuForge</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+
+        .container {
+            animation: fadeIn 1s ease;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        button {
+            padding: 14px 36px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 30px;
+            background: white;
+            color: #2c3e50;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .info-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            /* change to left:20px if you prefer */
+            padding: 10px 18px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #2c3e50;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: 0.3s ease;
+        }
+
+        .info-btn:hover {
+            transform: scale(1.05);
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>CurricuForge</h1>
+        <p>AI Powered Curriculum Design System</p>
+        <button onclick="window.location.href='/app'">Get Started</button>
+        <br><br>
+        <button onclick="window.location.href='/contact'">Get in Touch</button>
+
+    </div>
+
+    <a href="/info" class="info-btn">Know More</a>
+</body>
+
+</html>
